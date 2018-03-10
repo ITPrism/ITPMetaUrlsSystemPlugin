@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_ITPMETAURLS</name>
+    <author>Todor Iliev</author>
+    <copyright>Copyright (C) 2017 Todor Iliev ( ITPrism.com ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <version>4.4</version>
+    <creationDate>03 February, 2017</creationDate>
+	<description><![CDATA[
+	<p>System - ITPMeta URLs is a plugin that creates URLs automatically.</p>
+    <p><a href='http://itprism.com/help/32-itpmeta-opengraph-documentation-faq' target='_blank'>Read documentation</a> that will help you to setup the extensions.</p>
+	<p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+	<p>Please, <a href="http://extensions.joomla.org/extensions/extension/site-management/seo-a-metadata/itpmeta" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+	]]></description>
+	
+	<help url="PLG_SYSTEM_ITPMETAURLS_HELP_URL" />
+	
+	<files>
+		<filename plugin="itpmetaurls">itpmetaurls.php</filename>
+		<folder>language</folder>
+	</files>
+	
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+		       <field name="links_auto_collect_type" type="list" default="1" label="PLG_SYSTEM_ITPMETAURLS_LINK_COLLECTING_TYPE" description="PLG_SYSTEM_ITPMETAURLS_LINK_COLLECTING_TYPE_DESC" class="btn-group" >
+                   <option value="0">PLG_SYSTEM_ITPMETAURLS_FULL</option>
+                   <option value="1">PLG_SYSTEM_ITPMETAURLS_STRICT</option>
+               </field>
+		       <field name="links_new_state" type="radio" default="0"  label="PLG_SYSTEM_ITPMETAURLS_NEW_LINKS_STATE" description="PLG_SYSTEM_ITPMETAURLS_NEW_LINKS_STATE_DESC" class="btn-group">
+                   <option value="0">JUNPUBLISHED</option>
+                   <option value="1">JPUBLISHED</option>
+               </field>
+               <field name="links_autoupdate_state" type="radio" default="1"  label="PLG_SYSTEM_ITPMETAURLS_AUTOUPDATE_STATE" description="PLG_SYSTEM_ITPMETAURLS_AUTOUPDATE_STATE_DESC" class="btn-group">
+                   <option value="0">JOFF</option>
+                   <option value="1">JON</option>
+               </field>
+	       </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="System - ITPMeta URLs">http://cdn.itprism.com/updates/itpmeta/plg_system_itpmetaurls.xml</server>
+    </updateservers>
+</extension>
